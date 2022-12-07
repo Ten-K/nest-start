@@ -1,6 +1,6 @@
 #### 起步
 
-如果你还不了解nest, 请阅读[Nest中文文档](https://docs.nestjs.cn/9/introduction)。
+如果你还不了解nest, 请阅读[Nest中文文档](https://docs.nestjs.cn/9/introduction)。  
 拉取项目后, 您可以在系统命令行工具中运行以下命令, 以启动应用程序：
 
 ``` bash

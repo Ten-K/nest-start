@@ -4,9 +4,10 @@ import { AppController } from './app.controller';
 import { UploadModule } from './upload/upload.module';
 import { PModule } from './p/p.module';
 import { LoginModule } from './login/login.module';
+import { SpiderModule } from './spider/spider.module';
 
 @Module({
-  imports: [UploadModule, PModule, LoginModule],
+  imports: [UploadModule, PModule, LoginModule, SpiderModule],
   controllers: [AppController],
   providers: [AppService],
 })
