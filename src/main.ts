@@ -4,6 +4,7 @@ import { NestFactory } from '@nestjs/core';
 import { HttpFilter } from './common/filter';
 import { Response } from './common/response';
 import { ValidationPipe } from '@nestjs/common';
+// import { RoleGuard } from './guard/role/role.guard';
 import { NestExpressApplication } from '@nestjs/platform-express';
 
 /** 全局异常(拦截器)过滤器会覆盖管道校验提示；如需验证管道验证请注释第15行代码  */
@@ -17,6 +18,8 @@ async function bootstrap() {
   app.useGlobalInterceptors(new Response());
   /** 全局管道校验 */
   app.useGlobalPipes(new ValidationPipe());
+  /** 全局守卫: 在中间件之后拦截器或管道之前 */
+  // app.useGlobalGuards(new RoleGuard());
   await app.listen(3000);
 }
 bootstrap();

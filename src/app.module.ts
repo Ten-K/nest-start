@@ -6,9 +6,17 @@ import { PModule } from './p/p.module';
 import { LoginModule } from './login/login.module';
 import { SpiderModule } from './spider/spider.module';
 import { UserModule } from './user/user.module';
+import { GuardModule } from './guard/guard.module';
 
 @Module({
-  imports: [UploadModule, PModule, LoginModule, SpiderModule, UserModule],
+  imports: [
+    UploadModule,
+    PModule,
+    LoginModule,
+    SpiderModule,
+    UserModule,
+    GuardModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

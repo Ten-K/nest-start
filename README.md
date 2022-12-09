@@ -19,7 +19,7 @@ pnpm run start:dev
 - [x] 管道-转换
 - [x] 管道-验证DTO
 - [x] 爬虫
-- [ ] 守卫
-- [ ] 自定义装饰器
+- [x] 守卫
+- [x] 自定义装饰器
 - [ ] swagger接口文档
 - [ ] 连接数据库typeOrm
