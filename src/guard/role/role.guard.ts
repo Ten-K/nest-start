@@ -19,7 +19,7 @@ export class RoleGuard implements CanActivate {
     /** 获取请求的参数 */
     const req = context.switchToHttp().getRequest<Request>();
     /** 如果请求参数符合元信息要求，通过守卫 */
-    if (admin.includes(req.query.role as string)) {
+    if (admin && admin.includes(req.query.role as string)) {
       return true;
     }
     return false;
