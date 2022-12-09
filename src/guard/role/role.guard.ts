@@ -15,6 +15,7 @@ export class RoleGuard implements CanActivate {
   ): boolean | Promise<boolean> | Observable<boolean> {
     /** 获取接口元信息 */
     const admin = this.Reflector.get<string[]>('role', context.getHandler());
+    console.log('admin :>> ', admin);
     /** 获取请求的参数 */
     const req = context.switchToHttp().getRequest<Request>();
     /** 如果请求参数符合元信息要求，通过守卫 */

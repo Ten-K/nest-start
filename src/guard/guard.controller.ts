@@ -7,12 +7,12 @@ import {
   Param,
   Delete,
   UseGuards,
-  SetMetadata
 } from '@nestjs/common';
+import { RoleGuard } from './role/role.guard';
 import { GuardService } from './guard.service';
+import { Role, ReqUrl } from './role/role.decorator';
 import { CreateGuardDto } from './dto/create-guard.dto';
 import { UpdateGuardDto } from './dto/update-guard.dto';
-import { RoleGuard } from './role/role.guard';
 
 @Controller('guard')
 @UseGuards(RoleGuard)
@@ -26,8 +26,9 @@ export class GuardController {
 
   @Get()
   /** 设置接口元信息 */
-  @SetMetadata('role', ['admin'])
-  findAll() {
+  @Role('admin')
+  findAll(@ReqUrl('123') url: string) {
+    console.log('url :>> ', url);
     return this.guardService.findAll();
   }
 
