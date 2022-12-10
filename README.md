@@ -21,5 +21,5 @@ pnpm run start:dev
 - [x] 爬虫
 - [x] 守卫
 - [x] 自定义装饰器
-- [ ] swagger接口文档
-- [ ] 连接数据库typeOrm
+- [x] swagger接口文档
+- [x] 连接数据库typeOrm
