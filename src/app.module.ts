@@ -20,7 +20,7 @@ import { TestModule } from './test/test.module';
     GuardModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '47.103.32.42', // 启动数据库的IP地址/如果在本地启用mysql则用loaclhost即可
+      host: 'localhost', // 启动数据库的IP地址/如果在本地启用mysql则用loaclhost即可
       port: 3306,
       username: 'root',
       password: '123456',
